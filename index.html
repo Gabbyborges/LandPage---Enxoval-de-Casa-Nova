@@ -1,0 +1,896 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enxoval Completo para Casa Nova - Guia Definitivo PDF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #ff6b9d;
+            --primary-dark: #e91e63;
+            --primary-light: #ff8eb3;
+            --secondary: #f8f9fa;
+            --accent: #fce4ec;
+            --text: #1a1a1a;
+            --text-light: #64748b;
+            --white: #ffffff;
+            --shadow: rgba(255, 107, 157, 0.25);
+            --shadow-dark: rgba(0, 0, 0, 0.1);
+            --gradient: linear-gradient(135deg, #ff6b9d 0%, #e91e63 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--white);
+            font-weight: 400;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 107, 157, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Botão do Header Melhorado */
+        .cta-header {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px var(--shadow);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+        }
+
+        .cta-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-header:hover::before {
+            left: 100%;
+        }
+
+        .cta-header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--shadow);
+            border-color: var(--primary-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0 120px;
+            text-align: center;
+            background: linear-gradient(135deg, #fce4ec 0%, #f8f9fa 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="0.5" fill="%23ff6b9d" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--white);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 32px;
+            box-shadow: 0 4px 12px var(--shadow-dark);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--text);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Botão Principal Melhorado */
+        .cta-primary {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 24px 48px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px var(--shadow);
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .cta-primary:hover::before {
+            left: 100%;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 20px 40px var(--shadow);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-primary:active {
+            transform: translateY(-2px) scale(0.98);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 32px 24px;
+            background: var(--white);
+            border-radius: 24px;
+            border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px var(--shadow-dark);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 120px 0;
+            background: var(--secondary);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text);
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 20px;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+            border: 1px solid #f1f5f9;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px var(--shadow-dark);
+        }
+
+        .feature-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 24px;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 120px 0;
+            background: var(--gradient);
+            color: var(--white);
+            position: relative;
+        }
+
+        .benefits::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            pointer-events: none;
+        }
+
+        .benefits-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 64px;
+        }
+
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 24px;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            padding: 120px 0;
+            background: var(--white);
+        }
+
+        .testimonial-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 60px;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px var(--shadow-dark);
+            text-align: center;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            font-size: 120px;
+            color: var(--accent);
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-text {
+            font-size: 24px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            color: var(--text);
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 64px;
+            height: 64px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .author-info h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .author-info span {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 120px 0;
+            background: var(--secondary);
+        }
+
+        .pricing-card {
+            background: var(--white);
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 48px;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px var(--shadow-dark);
+            text-align: center;
+            position: relative;
+            border: 2px solid var(--primary);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient);
+            color: var(--white);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        .price-container {
+            margin-bottom: 32px;
+        }
+
+        .price-original {
+            font-size: 20px;
+            text-decoration: line-through;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .price-current {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .price-description {
+            color: var(--text-light);
+            font-size: 16px;
+        }
+
+        .guarantee {
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 16px;
+            margin: 32px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+
+        .payment-method {
+            background: var(--secondary);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-content h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-content p {
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        /* Floating Action Button Melhorado */
+        .fab {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--gradient);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            width: 68px;
+            height: 68px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 12px 28px var(--shadow);
+            z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--white);
+            animation: pulse 2s infinite;
+        }
+
+        .fab:hover {
+            transform: scale(1.15);
+            box-shadow: 0 16px 36px var(--shadow);
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 12px 28px var(--shadow), 0 0 0 0 rgba(255, 107, 157, 0.7);
+            }
+            70% {
+                box-shadow: 0 12px 28px var(--shadow), 0 0 0 10px rgba(255, 107, 157, 0);
+            }
+            100% {
+                box-shadow: 0 12px 28px var(--shadow), 0 0 0 0 rgba(255, 107, 157, 0);
+            }
+        }
+
+        /* Hotmart Button Override */
+        .hotmart-fb.cta-primary,
+        .hotmart-fb.cta-header,
+        .hotmart-fb.fab {
+            background: var(--gradient) !important;
+            color: var(--white) !important;
+            border: none !important;
+            text-decoration: none !important;
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            .hero {
+                padding: 60px 0 80px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .testimonial-card {
+                padding: 40px 24px;
+            }
+            
+            .testimonial-card::before {
+                font-size: 80px;
+                top: 10px;
+                left: 20px;
+            }
+            
+            .pricing-card {
+                padding: 32px 24px;
+            }
+
+            .cta-primary {
+                padding: 20px 32px;
+                font-size: 16px;
+            }
+        }
+
+        /* Micro-interactions */
+        .feature-card, .benefit-item, .stat-item {
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    🏠 Enxoval Perfeito
+                </div>
+                <a onclick="return false;" href="https://pay.hotmart.com/R87511766F?checkoutMode=2" class="cta-header hotmart-fb hotmart__button-checkout">✨ Comprar Agora</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    🎯 Guia Completo
+                </div>
+                <h1>Enxoval Completo para sua Casa Nova</h1>
+                <p>O guia definitivo com checklist completo, dicas e organização para montar sua casa dos sonhos sem esquecer de nada.</p>
+                <a onclick="return false;" href="https://pay.hotmart.com/R87511766F?checkoutMode=2" class="cta-primary hotmart-fb hotmart__button-checkout">
+                    🔥 Quero Meu Guia - R$ 9,99
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Itens no Checklist</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Economia Garantida</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Clientes Satisfeitos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7 dias</div>
+                    <div class="stat-label">Garantia Total</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">O que você vai receber</h2>
+                <p class="section-subtitle">Um guia completo e prático para organizar todo o seu enxoval sem stress</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3>Checklist Completo</h3>
+                    <p>Mais de 200 itens organizados por cômodo, desde utensílios básicos até detalhes decorativos que fazem toda a diferença na sua casa.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Planejamento Mensal e Orçamentos</h3>
+                    <p>Para você marcar os seus gastos mensais, e anotar os orçamentos feitos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>PDF Interativo</h3>
+                    <p>Documento editável para você marcar os itens conforme compra, definir prioridades e acompanhar seu progresso em tempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-content">
+                <div class="section-header">
+                    <h2 class="section-title">Por que este guia é essencial?</h2>
+                    <p class="section-subtitle">Transforme o processo de montar sua casa em algo organizado e econômico</p>
+                </div>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">✅</div>
+                        <div>Evite esquecimentos e compras desnecessárias</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">⏰</div>
+                        <div>Economize tempo e dinheiro nas compras</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <div>Organize suas prioridades por cômodo</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🏡</div>
+                        <div>Dicas exclusivas de decoração e organização</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🛒</div>
+                        <div>Lista de fornecedores confiáveis e verificados</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📊</div>
+                        <div>Planilha de orçamento e controle financeiro</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">O que nossos clientes dizem</h2>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Este guia me ajudou muito, estava perdida. Consegui organizar todo o meu enxoval sem estresse. Recomendo para todas as minhas amigas!</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">M</div>
+                    <div class="author-info">
+                        <h4>Maria Silva</h4>
+                        <span>São Paulo, SP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing" id="comprar">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Oferta Especial</h2>
+                <p class="section-subtitle">Acesso imediato ao guia completo por um preço especial</p>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-badge">🔥 60% OFF</div>
+                <div class="price-container">
+                    <div class="price-original">De R$ 19,99</div>
+                    <div class="price-current">R$ 9,99</div>
+                    <div class="price-description">Acesso vitalício ao PDF completo</div>
+                </div>
+                <div class="guarantee">
+                    <span>🛡️</span>
+                    <span>Garantia incondicional de 7 dias</span>
+                </div>
+                <a onclick="return false;" href="https://pay.hotmart.com/R87511766F?checkoutMode=2" class="cta-primary hotmart-fb hotmart__button-checkout">
+                    💳 Comprar Agora - R$ 9,99
+                </a>
+                <div class="payment-methods">
+                    <span class="payment-method">PIX</span>
+                    <span class="payment-method">Cartão</span>
+                    <span class="payment-method">Boleto</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Enxoval Perfeito</h3>
+                <p>Transformando casas, simplificando vidas.</p>
+                <p>contato@enxovalperfeito.com</p>
+                <p style="margin-top: 32px; font-size: 14px;">&copy; 2024 Enxoval Perfeito. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <a onclick="return false;" href="https://pay.hotmart.com/R87511766F?checkoutMode=2" class="fab hotmart-fb hotmart__button-checkout">🛒</a>
+
+    <script type="text/javascript">
+        function importHotmart(){ 
+            var imported = document.createElement('script'); 
+            imported.src = 'https://static.hotmart.com/checkout/widget.min.js'; 
+            document.head.appendChild(imported); 
+            var link = document.createElement('link'); 
+            link.rel = 'stylesheet'; 
+            link.type = 'text/css'; 
+            link.href = 'https://static.hotmart.com/css/hotmart-fb.min.css'; 
+            document.head.appendChild(link);	
+        } 
+        importHotmart(); 
+
+      // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .benefit-item, .stat-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
